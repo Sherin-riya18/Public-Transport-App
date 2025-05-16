@@ -1,0 +1,231 @@
+.App {
+  font-family: 'Arial', sans-serif;
+  background: url('C:\Users\Sherin Riya\Downloads\ch.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  min-height: 100vh;
+  padding: 20px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: none;
+  overflow: hidden;
+  position: relative;
+}
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); 
+  z-index: -1;
+}
+
+.welcome-screen {
+  margin-top: 100px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(30px);
+  animation: slideUp 1s ease-out;
+}
+
+.welcome-screen h1 {
+  font-size: 3rem;
+  color: #e60000; 
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: textGlow 2s infinite alternate;
+}
+
+.welcome-screen p {
+  font-size: 1.2rem;
+  color: #333; 
+  margin-bottom: 30px;
+}
+
+.welcome-screen button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #e60000; 
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-screen button:hover {
+  background-color: #b40000; 
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form container styles */
+.selection-form, .mode-selection, .transport-list, .transport-details {
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selection-form:hover, .mode-selection:hover, .transport-list:hover, .transport-details:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and select fields */
+select {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #e60000; /* Red border */
+  background-color: #ffffff;
+  color: black;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  background-color: #ffe6e6; /* Light red background on focus */
+  color: black;
+  box-shadow: 0 0 5px 2px rgba(230, 0, 0, 0.5);
+}
+
+/* Button styles */
+button {
+  padding: 15px 25px;
+  background-color: #e60000; /* Red */
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #b40000; /* Darker Red */
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Transport list styles */
+.transport-card {
+  background: rgba(255, 255, 255, 0.85); /* Light white background */
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.transport-card:hover {
+  background-color: #ffe6e6; /* Light red hover */
+  transform: scale(1.05);
+}
+
+.transport-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #e60000; /* Red color for transport name */
+}
+
+.transport-card button {
+  background-color: #ffffff;
+  color: #e60000; /* Red text color */
+  padding: 10px 20px;
+  border: 1px solid #e60000;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.transport-card button:hover {
+  background-color: #e60000;
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Transport details styles */
+.transport-details h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e60000; /* Red color for transport details */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transport-details p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: black;
+}
+
+.transport-details button {
+  background-color: #e60000; /* Red */
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.transport-details button:hover {
+  background-color: #b40000; /* Darker Red */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Success message */
+.success-message {
+  background-color: #e60000; /* Red */
+  color: white;
+  padding: 20px;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 30px;
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Animation effects */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes textGlow {
+  0% { text-shadow: 0 0 10px #ff4b5c, 0 0 20px #ff6a6c, 0 0 30px #ff6a6c; }
+  100% { text-shadow: 0 0 20px #ff6a6c, 0 0 30px #ff4b5c, 0 0 40px #ff4b5c; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
